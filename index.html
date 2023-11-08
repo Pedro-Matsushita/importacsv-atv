@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <title>Gráfico com importação do arquivo CSV</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Início da header -->
+        <header class="navbar navbar-expand-lg navbar-light fixed-top">
+            <div class="container">
+            <button class="custom-button">Importar CSV</button>
+            <!-- Importa o arquivo CSV -->
+            <input type="file" class="custom-file-input" id="customFile" accept=".csv" style="display: none;">
+            </div>
+            <div class="container">
+                <select id="chartType">
+                    <option value="line">Gráfico de Linhas</option>
+                    <option value="bar">Gráfico de Barras</option>
+                    <option value="doughnut">Gráfico de Rosquinha</option>
+                    <!-- Adicione mais tipos de gráficos conforme necessário -->
+                </select>
+                </div>
+                <div class="container">
+                <button class="custom-button" id="renderButton">Renderizar Gráfico</button>
+                </div>
+        </header>
+        <!-- Fim da header -->
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+    <canvas id="myChart" width="400" height="200"></canvas>
+    <script src="graficoein.js"></script>
+</body>
+</html>
